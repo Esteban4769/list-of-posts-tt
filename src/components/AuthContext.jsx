@@ -20,6 +20,7 @@ export const AuthProvider = ({ children }) => {
       const { accessToken, user } = await authService.refresh();
 
       accessTokenService.save(accessToken);
+      
       setUser(user);
     } catch (error) {
       console.log('User is not authentincated');
