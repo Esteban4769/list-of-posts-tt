@@ -1,7 +1,7 @@
 # List of post App
 
-This repository contains a simple post list application.
-You can checkout [DEMO](https://esteban4769.github.io/list-of-posts-tt/) 
+This repository contains a simple post list application.  
+You can checkout app here - [DEMO](https://esteban4769.github.io/list-of-posts-tt/)  
 Backend for this app - [API](https://github.com/Esteban4769/user-posts-api)
 
 
