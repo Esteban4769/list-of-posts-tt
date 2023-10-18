@@ -4,4 +4,8 @@ function getAll() {
   return httpClient.get('/users')
 }
 
-export const userService = { getAll };
+function getById(userId) {
+  return httpClient.get(`/users/${userId}`);
+}
+
+export const userService = { getAll, getById };

@@ -8,8 +8,8 @@ import { AccountActivationPage } from './pages/AccountActivationPage';
 import { AuthContext } from './components/AuthContext';
 import { LoginPage } from './pages/LoginPage';
 import { RegistrationPage } from './pages/RegistrationPage';
-import { RequireAuth } from './components/RequireAuth';
 import { UsersPage } from './pages/UsersPage';
+import { PostsPage } from './pages/PostsPage';
 import { Loader } from './components/Loader.jsx';
 import { HomePage } from './pages/HomePage.jsx';
 import { usePageError } from './hooks/usePageError.js';
@@ -32,6 +32,10 @@ function App() {
       <div className="navbar-start">
         <NavLink to="/" className="navbar-item">
           Home
+        </NavLink>
+
+        <NavLink to="/posts/all" className="navbar-item">
+          Posts
         </NavLink>
 
         <NavLink to="/users" className="navbar-item">
@@ -93,12 +97,15 @@ function App() {
             element={<LoginPage />}
           />
 
-          <Route path="/" element={<RequireAuth />}>
-            <Route
-              path="users"
-              element={<UsersPage />}
-            />
-          </Route>
+          <Route
+            path="users"
+            element={<UsersPage />}
+          />
+
+          <Route
+            path="posts/all"
+            element={<PostsPage />}
+          />
         </Routes>
       </section>
 
